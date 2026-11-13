@@ -59,4 +59,14 @@ footer div li a {
   text-decoration: none;
 }
 
+form {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  form {
+    width: 50%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
