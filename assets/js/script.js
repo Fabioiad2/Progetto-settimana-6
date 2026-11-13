@@ -128,12 +128,31 @@ servizi.forEach(s => {
 
 const rowWork = document.querySelector('#rowWork')
 
+function dettaglio(lavoro) {
+    const titleLavoro = document.querySelector('#exampleModalLabel')
+    const imgLavoro = document.querySelector('#imgLavoro')
+    const categoriaLavoro = document.querySelector('#categoriaLavoro')
+    const annoLavoro = document.querySelector('#annoLavoro')
+
+    titleLavoro.textContent = lavoro.titolo
+    imgLavoro.src = lavoro.img
+    imgLavoro.alt = lavoro.titolo
+    imgLavoro.classList.add('img-fluid')
+    categoriaLavoro.textContent = `Categoria: ${lavoro.categoria}`
+    annoLavoro.classList.add('h5')
+    annoLavoro.textContent = `Anno: ${lavoro.anno}`
+}
+
 function renderWork(list) {
     list.forEach(s => {
         const div1 = document.createElement('div')
         div1.classList.add('col-12', 'col-md-6', 'col-lg-4')
         const div2 = document.createElement('div')
         div2.classList.add('shadow', 'p-3')
+        div2.style.cursor = 'pointer'
+        div2.setAttribute('data-bs-toggle', 'modal')
+        div2.setAttribute('data-bs-target', '#exampleModal')
+        div2.addEventListener('click', () => dettaglio(s))
         const titolo = document.createElement('h4')
         const img = document.createElement('img')
         img.src = s.img
