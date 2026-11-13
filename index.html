@@ -127,12 +127,15 @@
             <h2 class="fw-bold">Contattaci</h2>
             <p>Complila il form ti rispondiamo entro 48 ore.</p>
             <form class="">
+                <div id="avviso"></div>
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label fw-bold"
-                  >Email address</label
+                  >Email address </label
                 >
+                <!-- ho messo l'input di tipo testo per fare la validazione js-->
                 <input
-                  type="email"
+                
+                  type="text"
                   class="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
@@ -143,6 +146,7 @@
                   >Password</label
                 >
                 <input
+                required
                   type="password"
                   class="form-control"
                   id="exampleInputPassword1"
@@ -152,7 +156,7 @@
                 <label for="exampleInputPassword1" class="form-label fw-bold"
                   >Tipo di progetto</label
                 >
-                <select class="form-select" name="" id="">
+                <select class="form-select" name="" id="select">
                     <option value="residenziale">Residenziale</option>
                     <option value="design">Design</option>
                     <option value="ristrutturazioni">Ristrutturazioni</option>
@@ -162,7 +166,8 @@
                 <label for="exampleInputPassword1" class="form-label fw-bold"
                   >Messaggio</label
                 >
-                <textarea rows="4" class="form-control" name="" id=""></textarea>
+                <textarea                 required
+ rows="4" class="form-control" name="" id="messaggio"></textarea>
               </div>
               <button type="submit" class="btn btn-primary w-100 ">Invia</button>
             </form>

@@ -173,3 +173,43 @@ function renderWork(list) {
 }
 
 renderWork(lavori)
+
+const toggleTema = document.querySelector('#toggle-tema')
+
+toggleTema.addEventListener('click', () => {
+    const temaScuro = document.body.classList.toggle('dark')
+    toggleTema.textContent = temaScuro ? 'Tema chiaro' : 'Tema scuro'
+})
+
+const form = document.querySelector('form')
+const avviso = document.querySelector('#avviso')
+
+form.addEventListener('submit',(e)=>{
+    e.preventDefault()
+    const email = document.querySelector('#exampleInputEmail1').value.trim()
+    const password = document.querySelector('#exampleInputPassword1').value.trim()
+    const select = document.querySelector('#select').value.trim()
+    const messaggio = document.querySelector('#messaggio').value.trim()
+    console.log(select)
+    console.log(email)
+    console.log(password)
+    console.log(messaggio)
+    if (email.includes('@') && email.length >=20) {
+        const object = {email,password,select,messaggio}
+        console.log(object)
+        avviso.textContent = ''
+        avviso.classList.remove('alert','alert-danger')
+        console.log('inchiude la @ ed ha 20 o più caratteri')
+        avviso.textContent = 'Form inviato correttamente'
+        avviso.classList.add('alert','alert-success')
+        setInterval(()=>{
+            avviso.textContent = ''
+            avviso.classList.remove('alert','alert-success')
+            form.reset()
+        },5000)
+    }
+    else{
+        avviso.textContent = 'Il campo email richiede "@" e deve contenere almeno 20 caratteri'
+        avviso.classList.add('alert','alert-danger')
+    }
+})

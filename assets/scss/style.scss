@@ -94,3 +94,36 @@ form{
 html{
     scroll-padding-top: 50px;
 }
+
+body.dark {
+    background-color: #121212;
+    color: #f1f1f1;
+
+    .shadow {
+        background-color: #1e1e1e;
+    }
+
+    .bg-body-secondary {
+        background-color: #1e1e1e !important;
+    }
+
+    .form-control,
+    .form-select {
+        background-color: #2b2b2b;
+        color: #f1f1f1;
+        border-color: #444;
+    }
+
+    .modal-content {
+        background-color: #1e1e1e;
+        color: #f1f1f1;
+    }
+
+    .btn-close {
+        filter: invert(1);
+    }
+
+    .text-muted {
+        color: #b0b0b0 !important;
+    }
+}
