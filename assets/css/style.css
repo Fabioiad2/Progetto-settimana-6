@@ -51,6 +51,11 @@ form button:hover {
   background-color: hsl(20, 30%, 27%) !important;
 }
 
+.cButton {
+  background-color: hsl(20, 30%, 35%);
+  color: white;
+}
+
 footer div li {
   list-style: none;
 }
