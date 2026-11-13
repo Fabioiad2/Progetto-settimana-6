@@ -1,17 +1,13 @@
-/* Error: There is no module with namespace "var".
- *    ,
- * 22 |         background-color: var.$hoverBtn;
- *    |                           ^^^^^^^^^^^^^
- *    '
- *   assets\scss\style.scss 22:27  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: There is no module with namespace "var".\a    \2577 \a 22 \2502          background-color: var.$hoverBtn;\a    \2502                            ^^^^^^^^^^^^^\a    \2575 \a   assets\\scss\\style.scss 22:27  root stylesheet';
+.bg-primary {
+  background-color: hsl(20, 20%, 15%) !important;
 }
+
+.hero {
+  min-height: 80vh;
+  background-color: hsl(20, 30%, 35%);
+}
+.hero .btn:hover {
+  background-color: hsl(20, 30%, 27%);
+}
+
+/*# sourceMappingURL=style.css.map */

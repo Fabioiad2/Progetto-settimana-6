@@ -11,7 +11,9 @@
 
 
 // === Override Bootstrap (sovrascrivi .btn-primary, .bg-primary, .text-primary col tuo colore brand) ===
-
+.bg-primary{
+    background-color: colors.$bgNav !important;
+}
 
 
 // === Stili custom delle sezioni (header sticky, hero, servizi, contatti, footer) ===
@@ -19,6 +21,6 @@
     min-height: colors.$heroHeight;
     background-color: colors.$heroBackground;
     .btn:hover{
-        background-color: var.$hoverBtn;
+        background-color: colors.$hoverBtn;
     }
 }
