@@ -5,7 +5,7 @@
     transition: 200ms;
     &:hover {
         box-shadow: colors.$cardHoverShadow !important;
-        transform: translateY(1px);
+        transform: translateY(3px);
     }
 }
 
