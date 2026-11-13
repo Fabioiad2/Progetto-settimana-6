@@ -8,6 +8,11 @@
 }
 .shadow:hover {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(1px);
+}
+
+.bg-body-secondary {
+  background-color: #F8F9FA !important;
 }
 
 .btn:hover {
@@ -23,12 +28,15 @@
   background-color: hsl(20, 30%, 35%);
 }
 .hero .btn:hover {
-  background-color: hsl(20, 30%, 27%);
+  background-color: hsl(20, 30%, 27%) !important;
   transition: 200ms;
 }
 
 form button {
   background-color: hsl(20, 30%, 35%) !important;
+}
+form button:hover {
+  background-color: hsl(20, 30%, 27%) !important;
 }
 
 /*# sourceMappingURL=style.css.map */

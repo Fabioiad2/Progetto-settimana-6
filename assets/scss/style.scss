@@ -20,7 +20,11 @@
     transition: 200ms;
     &:hover{
          box-shadow: colors.$cardHoverShadow !important;
+         transform: translateY(1px);
     }
+}
+.bg-body-secondary{
+    background-color: colors.$bgFormSection !important;
 }
 
 .btn:hover{
@@ -35,12 +39,14 @@
     min-height: colors.$heroHeight;
     background-color: colors.$heroBackground;
     .btn:hover{
-        background-color: colors.$hoverBtn;
+        background-color: colors.$hoverBtn !important;
             transition: 200ms;
 
     }
 }
 form button{
         background-color: colors.$heroBackground !important;
-
+    &:hover{
+        background-color: colors.$hoverBtn !important;
+    }
 }
