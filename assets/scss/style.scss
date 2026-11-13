@@ -64,6 +64,11 @@ form button{
 .cButton{
     background-color: colors.$heroBackground;
     color: white;
+    &:hover{
+        background-color: colors.$heroBackground;
+        opacity: 0.8;
+        color: white;
+    }
 }
 
 
@@ -84,4 +89,8 @@ form{
     form{
         width: 50%;
     }
+}
+
+html{
+    scroll-padding-top: 50px;
 }

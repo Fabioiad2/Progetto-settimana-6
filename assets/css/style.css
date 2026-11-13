@@ -55,6 +55,11 @@ form button:hover {
   background-color: hsl(20, 30%, 35%);
   color: white;
 }
+.cButton:hover {
+  background-color: hsl(20, 30%, 35%);
+  opacity: 0.8;
+  color: white;
+}
 
 footer div li {
   list-style: none;
@@ -72,6 +77,9 @@ form {
   form {
     width: 50%;
   }
+}
+html {
+  scroll-padding-top: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
