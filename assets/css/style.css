@@ -23,6 +23,18 @@
   font-size: 3rem;
 }
 
+.nav-link {
+  color: hsl(20, 30%, 35%) !important;
+}
+.nav-link:hover {
+  color: white !important;
+}
+
+#toggle-tema {
+  color: hsl(20, 30%, 35%) !important;
+  border: 1px solid hsl(20, 30%, 35%);
+}
+
 .hero {
   min-height: 80vh;
   background-color: hsl(20, 30%, 35%);
@@ -37,6 +49,14 @@ form button {
 }
 form button:hover {
   background-color: hsl(20, 30%, 27%) !important;
+}
+
+footer div li {
+  list-style: none;
+}
+footer div li a {
+  color: white;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
