@@ -58,93 +58,95 @@
       </nav>
     </header>
 
-    <section id="studio">
-      <!-- Hero: titolo grande, sottotitolo, CTA. Sfondo brand. min-height 80vh -->
-      <div
-        class="hero container-fluid d-flex flex-column align-items-center justify-content-center text-light text-center"
-      >
-        <h2>Architettura per spazi che parlano</h2>
-        <p>
-          Progettiamo case, uffici e spazi commerciali con attenzione alla luce,
-          ai materiali e al contesto
-        </p>
-        <button class="btn text-light">Inizia un progetto</button>
-      </div>
-    </section>
-
-    <section id="servizi">
-      <!-- 3 card servizi affiancate da md in su -->
-      <div class="container mt-5 text-center">
-        <h2 class="fw-bold">I nostri servizi</h2>
-        <p>Tre aree di lavoro, una sola attenzione alla qualità.</p>
-        <div id="rowServices" class="row g-4 justify-content-center">
-            <!-- col generate da js -->
-        </div>
-      </div>
-    </section>
-
-    <section id="work">
-      <!-- 3 card servizi affiancate da md in su -->
-      <div class="container mt-5 text-center">
-        <h2 class="fw-bold">I nostri lavori</h2>
-        <p>Tre aree di lavoro, una sola attenzione alla qualità.</p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap" id="categorie"></div>
-        <div id="rowWork" class="row g-4 justify-content-center">
-            <!-- col generate da js -->
-        </div>
-      </div>
-    </section>
+    <div class="main">
+        <section id="studio">
+          <!-- Hero: titolo grande, sottotitolo, CTA. Sfondo brand. min-height 80vh -->
+          <div
+            class="hero container-fluid d-flex flex-column align-items-center justify-content-center text-light text-center"
+          >
+            <h2>Architettura per spazi che parlano</h2>
+            <p>
+              Progettiamo case, uffici e spazi commerciali con attenzione alla luce,
+              ai materiali e al contesto
+            </p>
+            <button class="btn text-light">Inizia un progetto</button>
+          </div>
+        </section>
     
-
-    <section class="container-fluid bg-body-secondary" id="contatti">
-      <!-- Form contatti Bootstrap, larghezza limitata e centrata -->
-      <div
-        class="container d-flex flex-column align-items-center justify-content-center mt-5"
-      >
-        <h2 class="fw-bold">Contattaci</h2>
-        <p>Complila il form ti rispondiamo entro 48 ore.</p>
-        <form class="">
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label fw-bold"
-              >Email address</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
+        <section id="servizi">
+          <!-- 3 card servizi affiancate da md in su -->
+          <div class="container mt-5 text-center">
+            <h2 class="fw-bold">I nostri servizi</h2>
+            <p>Tre aree di lavoro, una sola attenzione alla qualità.</p>
+            <div id="rowServices" class="row g-4 justify-content-center">
+                <!-- col generate da js -->
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label fw-bold"
-              >Password</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
+        </section>
+    
+        <section id="work">
+          <!-- 3 card servizi affiancate da md in su -->
+          <div class="container mt-5 text-center">
+            <h2 class="fw-bold">I nostri lavori</h2>
+            <p>Tre aree di lavoro, una sola attenzione alla qualità.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap" id="categorie"></div>
+            <div id="rowWork" class="row g-4 justify-content-center">
+                <!-- col generate da js -->
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label fw-bold"
-              >Tipo di progetto</label
-            >
-            <select class="form-select" name="" id="">
-                <option value="residenziale">Residenziale</option>
-                <option value="design">Design</option>
-                <option value="ristrutturazioni">Ristrutturazioni</option>
-            </select>
+        </section>
+        
+    
+        <section class="container-fluid bg-body-secondary" id="contatti">
+          <!-- Form contatti Bootstrap, larghezza limitata e centrata -->
+          <div
+            class="container d-flex flex-column align-items-center justify-content-center mt-5"
+          >
+            <h2 class="fw-bold">Contattaci</h2>
+            <p>Complila il form ti rispondiamo entro 48 ore.</p>
+            <form class="">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label fw-bold"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label fw-bold"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label fw-bold"
+                  >Tipo di progetto</label
+                >
+                <select class="form-select" name="" id="">
+                    <option value="residenziale">Residenziale</option>
+                    <option value="design">Design</option>
+                    <option value="ristrutturazioni">Ristrutturazioni</option>
+                </select>
+              </div>
+               <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label fw-bold"
+                  >Messaggio</label
+                >
+                <textarea rows="4" class="form-control" name="" id=""></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 ">Invia</button>
+            </form>
           </div>
-           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label fw-bold"
-              >Messaggio</label
-            >
-            <textarea rows="4" class="form-control" name="" id=""></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary w-100 ">Invia</button>
-        </form>
-      </div>
-    </section>
+        </section>
+    </div>
 
     <footer class="mt-5">
       <!-- 3 colonne: Atelier+indirizzo / Link / Contatti. Copyright in fondo -->

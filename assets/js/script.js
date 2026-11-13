@@ -23,7 +23,7 @@ const servizi = [
         titolo: "Ristrutturazioni",
         paragraph: "Riqualificazione di spazi esistenti, gestione dei lavori e coordinamento con le imprese.",
     },
-   
+
 ]
 
 const lavori = [
@@ -80,13 +80,13 @@ function filtra(categoria) {
 categorie.forEach((c, i) => {
     const nomeCategoria = document.createElement('button')
     nomeCategoria.textContent = c
-    
+
     // Al caricamento: il primo ("tutti") è nero (btn-dark), gli altri btn-primary
     nomeCategoria.classList.add('btn-category', 'btn', i === 0 ? 'btn-dark' : 'cButton')
 
     nomeCategoria.addEventListener('click', () => {
         rowWork.textContent = ''
-        
+
         // 1. Riporta TUTTI i bottoni a btn-primary
         const allButtons = document.querySelectorAll('.btn-category')
         allButtons.forEach(b => {
@@ -128,10 +128,10 @@ servizi.forEach(s => {
 
 const rowWork = document.querySelector('#rowWork')
 
-function renderWork(list){
+function renderWork(list) {
     list.forEach(s => {
         const div1 = document.createElement('div')
-        div1.classList.add('col-12', 'col-md-6','col-lg-4')
+        div1.classList.add('col-12', 'col-md-6', 'col-lg-4')
         const div2 = document.createElement('div')
         div2.classList.add('shadow', 'p-3')
         const titolo = document.createElement('h4')
