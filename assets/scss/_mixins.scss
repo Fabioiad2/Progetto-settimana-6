@@ -1,0 +1,22 @@
+@use 'variables' as colors;
+
+@mixin card-elevata {
+    box-shadow: colors.$cardShadow !important;
+    transition: 200ms;
+    &:hover {
+        box-shadow: colors.$cardHoverShadow !important;
+        transform: translateY(1px);
+    }
+}
+
+@mixin solo-su($bp) {
+    @if $bp == md {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    } @else if $bp == lg {
+        @media screen and (min-width: 992px) {
+            @content;
+        }
+    }
+}

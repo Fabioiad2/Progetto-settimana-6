@@ -2,6 +2,19 @@
   background-color: hsl(20, 20%, 15%) !important;
 }
 
+.btn-primary {
+  background-color: hsl(20, 30%, 35%) !important;
+  border-color: hsl(20, 30%, 35%) !important;
+}
+.btn-primary:hover {
+  background-color: hsl(20, 30%, 27%) !important;
+  border-color: hsl(20, 30%, 27%) !important;
+}
+
+.text-primary {
+  color: hsl(20, 30%, 35%) !important;
+}
+
 .shadow {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
   transition: 200ms;
@@ -24,18 +37,15 @@
 }
 
 .nav-link {
-  color: rgb(164, 164, 164) !important;
+  color: hsl(20, 30%, 35%) !important;
 }
 .nav-link:hover {
   color: white !important;
 }
 
 #toggle-tema {
-  color: rgb(164, 164, 164) !important;
+  color: hsl(20, 30%, 35%) !important;
   border: 1px solid hsl(20, 30%, 35%);
-  &:hover{
-    background-color: hsl(20, 30%, 35%);
-  }
 }
 
 .hero {
@@ -75,12 +85,12 @@ footer div li a {
 form {
   width: 100%;
 }
-
 @media screen and (min-width: 768px) {
   form {
     width: 50%;
   }
 }
+
 html {
   scroll-padding-top: 50px;
 }

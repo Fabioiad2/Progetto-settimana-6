@@ -1,4 +1,5 @@
-@use 'colors' as colors;
+@use 'variables' as colors;
+@use 'mixins' as mixins;
 // Atelier — Week Project Settimana VI
 // Definisci qui le tue variabili, mixin, override Bootstrap.
 
@@ -9,19 +10,26 @@
 // === Mixin (definisci almeno @mixin card-elevata o equivalente) ===
 
 
-
 // === Override Bootstrap (sovrascrivi .btn-primary, .bg-primary, .text-primary col tuo colore brand) ===
 .bg-primary{
     background-color: colors.$bgNav !important;
 }
 
-.shadow{
-    box-shadow: colors.$cardShadow !important;
-    transition: 200ms;
+.btn-primary{
+    background-color: colors.$heroBackground !important;
+    border-color: colors.$heroBackground !important;
     &:hover{
-         box-shadow: colors.$cardHoverShadow !important;
-         transform: translateY(1px);
+        background-color: colors.$hoverBtn !important;
+        border-color: colors.$hoverBtn !important;
     }
+}
+
+.text-primary{
+    color: colors.$textColor !important;
+}
+
+.shadow{
+    @include mixins.card-elevata;
 }
 .bg-body-secondary{
     background-color: colors.$bgFormSection !important;
@@ -83,10 +91,7 @@ footer div li{
 
 form{
     width: 100%;
-}
-
-@media screen and (min-width:768px) {
-    form{
+    @include mixins.solo-su(md) {
         width: 50%;
     }
 }

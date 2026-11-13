@@ -9,7 +9,7 @@ const servizi = [
         id: 1,
         icon: "🏠",
         titolo: "Progettazione residenziale",
-        paragraph: "Case private, ville e ristrutturazioni domestiche, dal sopralluogo alla consegna delle chiavi",
+        paragraph: "Case private, ville e ristrutturazioni domestiche, dal sopralluogo alla consegna delle chiavi.",
     },
     {
         id: 2,
@@ -29,51 +29,56 @@ const servizi = [
 const lavori = [
     {
         img: "assets/img/600x400.svg",
-        titolo: "primo lavoro",
+        titolo: "Casa Brera",
         anno: "2024",
-        categoria: "Prima categoria"
+        categoria: "Residenziale",
+        descrizione: "Residenza privata nel cuore di Brera con grandi vetrate sul cortile interno, pavimenti in rovere naturale e volumi essenziali pensati per valorizzare la luce naturale."
     },
     {
         img: "assets/img/600x400.svg",
-        titolo: "secondo",
-        anno: "2026",
-        categoria: "seconda categoria"
+        titolo: "Loft Navigli",
+        anno: "2025",
+        categoria: "Interior design",
+        descrizione: "Allestimento completo di un open space ex industriale sui Navigli, con arredi su misura in noce canaletto, ferro brunito e illuminazione scenografica."
     },
     {
         img: "assets/img/600x400.svg",
-        titolo: "terzo",
-        anno: "2026",
-        categoria: "terza categoria"
-    },
-    {
-        img: "assets/img/600x400.svg",
-        titolo: "quarto",
+        titolo: "Palazzina Liberty",
         anno: "2024",
-        categoria: "Prima categoria"
+        categoria: "Ristrutturazioni",
+        descrizione: "Recupero conservativo della facciata storica e riorganizzazione completa degli interni per creare tre unità abitative contemporanee ad alta efficienza energetica."
     },
     {
         img: "assets/img/600x400.svg",
-        titolo: "quinto",
-        anno: "2026",
-        categoria: "seconda categoria"
+        titolo: "Villa sul Lago",
+        anno: "2025",
+        categoria: "Residenziale",
+        descrizione: "Villa unifamiliare affacciata sul lago di Como con terrazze panoramiche, pietra locale e un dialogo continuo tra architettura e paesaggio."
     },
     {
         img: "assets/img/600x400.svg",
-        titolo: "sesto",
+        titolo: "Studio Legale Porta Nuova",
         anno: "2026",
-        categoria: "terza categoria"
+        categoria: "Interior design",
+        descrizione: "Progettazione degli interni per uno studio professionale: sale riunioni acusticamente isolate, pareti vetrate e boiserie minimalista."
+    },
+    {
+        img: "assets/img/600x400.svg",
+        titolo: "Cascina San Marco",
+        anno: "2026",
+        categoria: "Ristrutturazioni",
+        descrizione: "Riqualificazione integrale di un'antica cascina lombarda trasformata in spazio polifunzionale per eventi, showroom e abitazione."
     },
 ]
 
-const categorie = ['tutti', 'Prima categoria', 'seconda categoria', 'terza categoria']
+const categorie = ['Tutti', 'Residenziale', 'Interior design', 'Ristrutturazioni']
 const categorieSection = document.querySelector('#categorie')
 
 function filtra(categoria) {
-    if (categoria == 'tutti') {
+    if (categoria === 'Tutti') {
         return lavori
     }
-    return lavori.filter(l => l.categoria == categoria
-    )
+    return lavori.filter(l => l.categoria === categoria)
 }
 
 
@@ -133,6 +138,7 @@ function dettaglio(lavoro) {
     const imgLavoro = document.querySelector('#imgLavoro')
     const categoriaLavoro = document.querySelector('#categoriaLavoro')
     const annoLavoro = document.querySelector('#annoLavoro')
+    const descrizioneLavoro = document.querySelector('#descrizioneLavoro')
 
     titleLavoro.textContent = lavoro.titolo
     imgLavoro.src = lavoro.img
@@ -141,6 +147,7 @@ function dettaglio(lavoro) {
     categoriaLavoro.textContent = `Categoria: ${lavoro.categoria}`
     annoLavoro.classList.add('h5')
     annoLavoro.textContent = `Anno: ${lavoro.anno}`
+    descrizioneLavoro.textContent = lavoro.descrizione
 }
 
 function renderWork(list) {
@@ -186,30 +193,26 @@ const avviso = document.querySelector('#avviso')
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
+    const nome = document.querySelector('#exampleInputPassword1').value.trim()
     const email = document.querySelector('#exampleInputEmail1').value.trim()
-    const password = document.querySelector('#exampleInputPassword1').value.trim()
     const select = document.querySelector('#select').value.trim()
     const messaggio = document.querySelector('#messaggio').value.trim()
-    console.log(select)
-    console.log(email)
-    console.log(password)
-    console.log(messaggio)
-    if (email.includes('@') && email.length >=20) {
-        const object = {email,password,select,messaggio}
+
+    if (email.includes('@') && messaggio.length >= 20) {
+        const object = {nome, email, select, messaggio}
         console.log(object)
-        avviso.textContent = ''
-        avviso.classList.remove('alert','alert-danger')
-        console.log('inchiude la @ ed ha 20 o più caratteri')
+        avviso.classList.remove('alert-danger')
         avviso.textContent = 'Form inviato correttamente'
-        avviso.classList.add('alert','alert-success')
-        setInterval(()=>{
+        avviso.classList.add('alert', 'alert-success')
+        setTimeout(()=>{
             avviso.textContent = ''
-            avviso.classList.remove('alert','alert-success')
+            avviso.classList.remove('alert', 'alert-success')
             form.reset()
-        },5000)
+        }, 5000)
     }
     else{
-        avviso.textContent = 'Il campo email richiede "@" e deve contenere almeno 20 caratteri'
-        avviso.classList.add('alert','alert-danger')
+        avviso.classList.remove('alert-success')
+        avviso.textContent = 'Inserisci un\'email valida (con "@") e un messaggio di almeno 20 caratteri.'
+        avviso.classList.add('alert', 'alert-danger')
     }
 })
