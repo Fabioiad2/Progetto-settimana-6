@@ -1,9 +1,9 @@
+@use 'colors' as colors;
 // Atelier — Week Project Settimana VI
 // Definisci qui le tue variabili, mixin, override Bootstrap.
 
 
 // === Variabili (definisci $brand-primary, $brand-secondary, $radius-base, ecc.) ===
-
 
 
 // === Mixin (definisci almeno @mixin card-elevata o equivalente) ===
@@ -15,3 +15,10 @@
 
 
 // === Stili custom delle sezioni (header sticky, hero, servizi, contatti, footer) ===
+.hero{
+    min-height: colors.$heroHeight;
+    background-color: colors.$heroBackground;
+    .btn:hover{
+        background-color: var.$hoverBtn;
+    }
+}
