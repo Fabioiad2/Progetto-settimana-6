@@ -16,10 +16,15 @@
 }
 
 .shadow{
-    box-shadow: colors.$cardShadow;
+    box-shadow: colors.$cardShadow !important;
+    transition: 200ms;
     &:hover{
-         box-shadow: colors.$cardHoverShadow;
+         box-shadow: colors.$cardHoverShadow !important;
     }
+}
+
+.btn:hover{
+    transition: 200ms !important;
 }
 
 .icon{
@@ -31,5 +36,11 @@
     background-color: colors.$heroBackground;
     .btn:hover{
         background-color: colors.$hoverBtn;
+            transition: 200ms;
+
     }
+}
+form button{
+        background-color: colors.$heroBackground !important;
+
 }

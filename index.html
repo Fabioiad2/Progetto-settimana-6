@@ -114,8 +114,52 @@
       </div>
     </section>
 
-    <section id="contatti">
+    <section class="container-fluid bg-body-secondary" id="contatti">
       <!-- Form contatti Bootstrap, larghezza limitata e centrata -->
+      <div
+        class="container d-flex flex-column align-items-center justify-content-center mt-5 p-5"
+      >
+        <h2 class="fw-bold">Contatti</h2>
+        <p>Complila il form ti rispondiamo entro 48 ore.</p>
+        <form class="w-50">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label fw-bold"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label fw-bold"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label fw-bold"
+              >Tipo di progetto</label
+            >
+            <select class="form-select" name="" id="">
+                <option value="residenziale">Residenziale</option>
+            </select>
+          </div>
+           <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label fw-bold"
+              >Messaggio</label
+            >
+            <textarea class="form-control" name="" id=""></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 ">Invia</button>
+        </form>
+      </div>
     </section>
 
     <footer>

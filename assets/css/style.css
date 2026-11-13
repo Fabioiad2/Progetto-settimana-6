@@ -3,10 +3,15 @@
 }
 
 .shadow {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+  transition: 200ms;
 }
 .shadow:hover {
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+.btn:hover {
+  transition: 200ms !important;
 }
 
 .icon {
@@ -19,6 +24,11 @@
 }
 .hero .btn:hover {
   background-color: hsl(20, 30%, 27%);
+  transition: 200ms;
+}
+
+form button {
+  background-color: hsl(20, 30%, 35%) !important;
 }
 
 /*# sourceMappingURL=style.css.map */
